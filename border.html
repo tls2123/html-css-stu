@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--border-width : 선의 두께를 얼마나게 할 것인지
+       border-style :  선의 어떤 스타일-->
+    <!--
+        solid : 실선, double: 두선, dashed:타선, dotted:점선, inset: 안쪽에 들어간거 같은 3차원 선
+    -->
+    <!--border-radius : css3에서 추가된 속성으로  테두리가 등굴해진다.
+        border속성과 border-radius속성은 별개로 각각 사용한다. -->
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+
+            border: 10px solid red;
+            border-color: red black blue yellow;
+            border-radius: 50px 10px;
+            /*
+            위와 같은 표현 3개는 동시에 써주어서 한번에 작성을 한다.
+            border-width: 10px;
+            border-style: solid;
+            border-color: red;
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

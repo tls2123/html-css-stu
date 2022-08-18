@@ -1,0 +1,33 @@
+<div class="wrap">
+    <div class="box">
+
+    </div>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+        }
+        .wrap{
+            position: relative;
+        }
+    </style>
+</div>
+<style>
+    .box{
+        animation-name: 이름;
+        animation-duration: 4s;
+        animation-fill-mode: both;
+        animation-direction: reverse;
+        animation-iteration-count: 2;
+    }
+    @keyframes 이름{
+        0% {
+            left: 0; top: 0;
+        }
+        100% {
+            left: 200px; top:200px
+        }
+    }
+</style>

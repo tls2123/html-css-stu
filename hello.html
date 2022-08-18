@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--link 태그를 사용해서 외부에 있는 css를 가지고 온다.-->
+    <link rel="stylesheet" href="test.css">
+    <!--내부에서 css사용하는 방법 style 태그를 사용해서
+    head태그 안에 작성한다. 어디에 작성하든 사용은 가능하다.-->
+    <!--h2와 같은 것을 선택자(selector)이라고 한다.
+    다양한 선택자가 존재한다.-->
+    <!--쉼표를 통해서 여러개의 태그에 적용이 가능하다. ex) h1, h2-->
+    <!--ID 선택자는 속성중에 하나 있데 중요해서 따로 있다. ex)#아이디
+    ID의 경우 html내부에서 하나만 존재 그래야 좋음-->
+    <!--클래스는 여러개를 띄어쓰기로 구분해서 입력이 가능하다. ex) .클래스
+    여러개의 클래스를 지목하고 싶으면 ex).a.b.c 이런 식으로 가능하다.-->
+    <!--후손 선택자아 자손 선택자-->
+    <!--후손 : 자신 아래있는 모든 태그로 띄어쓰기를 통해 사용 
+        ex) body h2 이러면 h2를 가리키는 것
+        자손 : 자신 바로 아래에 있는 태그
+        ex) body > h2
+    -->
+    <!--속성 선택자 : []통해서 작성
+        [title="better"] 이라고 하면 그것만 적용
+        [title]를 사용하면 title이라는 속성이 있는 값에 적용
+    -->
+    <!--빠르게 작성하는 방법 : zenCoding를 사용하면 속도 up 웹페이지 가서 
+        방법 확인 해보기-->
+    <style>
+        body h2 {
+            color: rgb(70, 125, 103);
+        }
+        ul li {
+            color:darkorange;
+        }
+        [title]{
+            color: burlywood;
+        }
+    </style>
+    <!--특정 태그에만 사용하는 방법 최근에는 거이 사용하지 않음
+    Inline방식 태그 내부에 style 속성을 넣은 방식-->
+</head>
+<body>
+    <h1>hello world...!</h1>
+    <h2>bye bye...!</h2>
+    <h3 style="color: blueviolet">ok ok ...!</h3>
+
+    <ul>
+        <li>hi hi hi ...!</li>
+        <li>hi hi hi ...!</li>
+        <li>hi hi hi ...!</li>
+    </ul>
+    <h3 title="better">better better...!</h3>
+</body>
+</html>

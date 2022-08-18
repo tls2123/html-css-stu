@@ -1,0 +1,44 @@
+<div class="wrap">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+<!--트렌지션 속성 블록 => 속성이름 시간 타이밍함수, 딜레이 여러개를 쉼표로 연결해서 지정-->
+<style>
+    .box{
+        height: 100px;
+        width: 100px;
+        background-color: green;
+        /*2초에 걸쳐서 변화가 일어난다*/
+        /*트랜지션이란 변화를 부드럽게 만들어주는 기능*/
+        transition-duration: 2s, 5s, 10s;
+        /*애니메이션이 3초후에 발생함 & 3초간 마우스가 올라가 잇으면*/
+        transition-delay: 0s, 2s, 5s;
+        /*이 순서에 따라 변경된다.*/
+        transition-property: width, background-color, border-radius;
+    }
+    
+    .box:nth-child(1){
+        transition-timing-function: linear;
+    }
+    .box:nth-child(2){
+        transition-timing-function: ease;
+    }
+    .box:nth-child(3){
+        transition-timing-function: ease-in;
+    }
+    .box:nth-child(4){
+        transition-timing-function: ease-out;
+    }
+    .box:nth-child(5){
+        transition-timing-function: ease-in-out;
+    }
+    .wrap:hover > .box{
+        width: 300px;
+        background-color: orange;
+        /*opacity: 0.2;*/
+        border-radius: 30px;
+    }
+</style>

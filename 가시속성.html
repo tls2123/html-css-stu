@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--가시 속성을 눈에 보이는 속성을 의미한다.-->
+    <!--display속성 : 이전에 블록형식과 인라인 속성을 생각하면 된다.
+        display : none를 해주면 안보이게 해준다.-->
+    <!--인라이 태그의 경우 죄우에만 크기를 먹는다.
+        반면에 블록의 경우 상하좌우 다 크기를 먹는다.-->
+    <!--사실따라 만들 때 모든 속성이 중요한데,
+        display속성이 가장 기본이라 이걸 모르고 따라하면 만들기 굉장히 힘들다.-->
+    <!--visibility속성은 보이고 안보이게 만드는 속성
+        태그의 속성이 사라지는 것이 아니라 그냥 보이지만 안게되는 속성
+    영역은 다 차지하고 있다.-->
+    <!--opacity 많이 사용하는 속성
+        태그의 투명도를 조절하는 속성
+    0 : 투명, 1 : 불투명-->
+    <!-- rgb를 사용하고 opacity를 사용하면 배경 글자 모두 투명도 적용
+        rgba를 사용하면 배경만 투명도가 적용된다. 
+        두가지를 구분하고 사용해야 하고 많이 사용되는 방식이다.-->
+    <style>
+        div{
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: rgb(179, 255, 0);
+            opacity: 0.3;
+        }
+        h1 {
+            display: none;
+        }
+        h2{
+            visibility: hidden;
+        }
+        span{
+            margin: 10px;
+            padding: 10px;
+            width: 100px;
+            height: 100px;
+        }
+        .inline-block{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="black"></div>
+    <h1>hello hello</h1>
+    <h1>hello hello</h1>
+    <h1>hello hello</h1>
+
+    <h2>사라질 속성</h2>
+
+    <span>원래 span는 인라인 방식</span>
+    <span>원래 span는 인라인 방식</span>
+    <span class="inline-block">원래 span는 인라인 방식 | 이거는 블록 형식으로 css</span>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*위치를 변경할 때는 포지션이라는 걸 사용
+        absolute를 사용하면 html의 기본 공식 위치를 깨버리고 나타남
+        */
+        /*기본 공식
+        자식에 position:absolute를 지정하면 
+        1. 부모에 relative를 준다.
+        2. 부모의 높이를 어떻게든 지정해서 자식을 감게주게 한다.
+        */
+        /*자신이 설정해준 위치를 넘어가는 것을 overflow되엇다라고 한다.
+        overflow된 부분을 처리해주는것이 overflow속성이다.*/
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+        .red{
+            background-color: red;
+            left: 100px;
+            top: 100px;
+        }
+        .green{
+            background-color: green;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .container{
+            position: relative;
+            height: 100px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <h1>hello</h1>
+    <div class="container">
+        <p>Magna sit cillum cupidatat do occaecat aliquip id.</p>
+        <p>Minim proident est pariatur mollit occaecat consequat enim culpa nostrud est. Quis et proident officia elit tempor voluptate sit qui dolor voluptate nulla. Non commodo occaecat et laborum do duis aliqua dolore quis. Cillum aliquip est amet minim consectetur tempor deserunt cillum consequat ullamco est sunt labore non. Commodo eu proident labore fugiat nostrud qui culpa velit voluptate.
+        Reprehenderit ea et eiusmod commodo enim non. Ad eiusmod non do irure culpa id non pariatur reprehenderit ullamco culpa. Est voluptate proident nisi duis laboris consectetur nulla aliqua eu qui. Enim non proident Lorem magna ut dolore non amet. Incididunt do eiusmod elit pariatur occaecat. Nisi excepteur est culpa consequat eiusmod consequat ex mollit aute. Ex exercitation et officia duis exercitation culpa.</p>
+        <div class="box red"></div>
+        <div class="box green"></div>
+        <div class="box blue"></div>
+    </div>
+</body>
+</html>

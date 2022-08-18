@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--뷰포트 메타 태그 | 스마트폰 마다 다른 크기를 맞춰주는-->
+    <title>Document</title>
+    <!--이미지를 위한 그레이디언트 사용 
+    이는 css3를 사용하면 기능을 만들수 있지만 
+    지금 이 방법은 이미지를 활용하면 그레이언트 뿐만 아니라 
+    패턴을 가진 헤더도 만들 수 있다.-->
+    <!--헤더 구성-->
+    <style>
+        .icon{
+            display: block;
+        }
+        .bg-header_right_button {
+            width: 32px; height: 32px;
+            background: url('css_sprites.png') -65px -1px;
+        }
+        .bg-header_left_button {
+            width: 62px; height: 32px;
+            background: url('css_sprites.png') -1px -1px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="main_header">
+            <i class="icon bg-header_left_button"></i>
+            <h1>Mobile</h1>
+            <i class="icon bg-header_right_button"></i>
+        </div>
+        <style>
+            *{
+                margin: 0; padding: 0;
+            }
+            #main_header{
+                height: 45px;
+                line-height: 45px;
+                text-align: center;
+                background: url(header_background.png);
+                position: relative;
+            }
+            #main_header > h1{
+                color: white;
+            }
+            .bg-header_left_button{
+                position: absolute;
+                left: 5px; top: 7px;
+            }
+            .bg-header_right_button{
+                position: absolute;
+                right: 5px; top: 7px;
+            }
+        </style>
+        <!--테이블로 수평 정렬하기-->
+        <!--업계에서는 엣지있게 사용하려고 table대신 div로 해서 다 지정한다고 한다.
+        이 경우 style에 부모-display: table, 자식-display:table-celld를 사용-->
+        <table>
+            <th>
+                <td><a href="#">버튼</a></td>
+                <td><a href="#">버튼</a></td>
+                <td><a href="#">버튼</a></td>
+                <td><a href="#">버튼</a></td>
+                <td><a href="#">버튼</a></td>
+            </th>
+        </table>
+        <style>
+            table{
+                width: 100%;
+                border-bottom: 1px solid black;
+            }
+            td{
+                text-align: center;
+            }
+            td > a{
+                /*이런식으로 주면 글자 뿐만 아니라 그 주변 블록 구역까지 클릭해도 넘어감*/
+                display: block;
+                height: 35px;
+                line-height: 35px;
+                text-decoration: none;
+                color: #000;
+            }
+        </style>
+    </div>
+</body>
+</html>

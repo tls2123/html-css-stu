@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--웹페이지에서 아이콘은 제공하는 방법
+    1. 하나하나으 이미지로 제공하는 방법 :
+        커넥션을 낭비하는 문제가 발생해서 좋지 않음 
+        웹브라우저가 요청에 보낼 수 있는 커넥션의 수는 5개
+    위의 방법은 낭비가 많아 
+    그래서 나온것은 브라우저가 나올 때 같이 나오는 것
+    스프라이트를 사용하는 것이다.-->
+    <!--svg는 백터를 사용해서 이미지를 만들어 옴 
+    일일이 만들지는 않고 디자인 프로그램으로 만들어서 가지고 와서 사용
+    고해상도, 스마트폰 추천 -->
+    <!--스프라이트 이미지로 제공하는 방법 
+    가장 많이 사용하는 방법
+    i태그는 원래는 기울어진 글자 태그이지만 기울어진 글자가 거이 없어서 
+    개발자들이 이를 icon으로 착각해 i로 아아콘은 많이 쓴다.
+    스프라이트 이미지는 많이 사용하는 아이콘을 하나에 모아서 이를 사용하는 것
+    -->
+    <!--css sprites generator이 사이트에서 스프라이트 이미지를 만들 수 있다.-->
+    <style>
+        .icon{
+            display: block;
+        }
+        .bg-header_right_button {
+            width: 32px; height: 32px;
+            background: url('css_sprites.png') -65px -1px;
+        }
+        .bg-header_left_button {
+            width: 62px; height: 32px;
+            background: url('css_sprites.png') -1px -1px;
+        }
+    </style>
+</head>
+<body>
+    <i class="icon bg-header_left_button"></i>
+    <i class="icon bg-header_right_button"></i>
+    
+</body>
+</html>

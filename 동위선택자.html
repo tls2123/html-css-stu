@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <!--동위선택자
+    1. + | 자기 태그 바로 뒤의 태그를 선택하는 동의 선택자
+    2. ~ | 어떤 태그 뒤에 있는 모든 태그들의 의미한다.
+    많이 사용하는 것은 아님, 요즘에는 자바로 다 설정
+    -->
+    <style>
+        h1 ~ h2{
+            color: red;
+        }
+        input{
+            display: none;
+        }
+        input:nth-of-type(1) ~ div:nth-of-type(1){
+            display: none;
+        }
+        input:nth-of-type(2) ~ div:nth-of-type(2){
+            display: none;
+        }
+        input:nth-of-type(1):checked ~ div:nth-of-type(1){
+            display: block;
+        }
+        input:nth-of-type(2):checked ~ div:nth-of-type(2){
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h2>Lorem ipsum</h2>
+    <h1>Lorem ipsum</h1>
+    <h2>Lorem ipsum</h2>
+    <h2>Lorem ipsum</h2>
+    <h2>Lorem ipsum</h2>
+    <h2>Lorem ipsum</h2>
+
+    <label for="tab1">Tab1</label>
+    <label for="tab2">Tab2</label>
+    <input type="radio" name="tab" id="tab1" checked>
+    <input type="radio" name="tab" id="tab2">
+    <div class="tab-item">1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, vel asperiores expedita quos eveniet debitis sit tenetur veritatis et tempora perferendis voluptates itaque natus omnis necessitatibus animi odit, vero ut.</div>
+    <div class="tab-item">2Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi numquam est voluptatum mollitia illo at eligendi error. Illum iusto repellat, beatae maxime incidunt veritatis aliquid cum, quas totam tempore possimus?</div>
+    
+</body>
+</html>

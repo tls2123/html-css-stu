@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--
+        float속성을 사용한 수평 정렬
+        - 자식에 width, float주고 부모에 overflow:hidden | 더 많이 사용
+        float속성과 clear속성을 사용한 레이아웃
+        - 자식에 width,float주고 부모::after에 clear:both, content:"", display:block
+        flax레이아웃
+        -(자식에게 너비주고)그냥 부모에 display:flex
+        flex는 구글에서 주로 사용하는 거같음 책에는 많은 내용이 없으니
+        따로 공부가 필요한 부분
+    -->
+    <style>
+        body{
+            width: 500px;
+            margin: 0 auto;
+        }
+        .aside{
+            width: 200px;
+            float: left;
+            border: 5px solid white;
+        }
+        .section{
+            width: 260px;
+            border: 5px solid red;
+            float: left;
+        }
+        .container{
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>header</h1>
+    </div>
+    <div class="container">
+        <div class="aside">
+            <h1>aside</h1>
+            <p>consectetur cupidatat sit ex deserunt exercitation ad fugiat qui fugiat non id.</p> 
+        </div>
+        <div class="section">
+            <h1>section</h1>
+            <p>consectetur cupidatat sit ex deserunt exercitation ad fugiat qui fugiat non id.</p>
+        </div>        
+    </div>
+    <div class="footer">
+        <p>hello good dayMinim aute nulla id aute fugiat excepteur ex voluptate nostrud amet.</p>
+    </div>
+</body>
+
+</html>

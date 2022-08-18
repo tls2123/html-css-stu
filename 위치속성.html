@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--중앙 정렬 | margin: 0 auto-->
+    <!--레이아웃은 가로로가 자르는 것을 기준으로 한다.-->
+    <!--수평으로 자르기 |
+    float속성을 사용한 수평정렬 | 자식에 width, float주고 부모에 overflow:hide -->
+    <style>
+        .container{
+            width: 960px;
+            margin: 0 auto;
+        }
+        .header{
+            height: 20px;
+            background-color: red;
+        }
+        .nav{
+            height: 30px;
+            background-color: green;
+        }
+        .center{
+            overflow: hidden;
+        }
+        h1{
+            margin: 0;
+        }
+        .footer{
+            height: 200px;
+            background-color: blue;
+        }
+        /*
+        width의 속성의 합이 부모의 속성합과 같아야한다.
+        960 = aside + section
+        이걸 계산하는게 귀찮으면 %으로 주면 된다.
+        float 속성에 left로 둘다 속성을 주는것이 일반적인데
+        left, right를 주는 경우는 속성의 합이 전체의 합보다 작을 경우 
+        그래서 그 중간에 빈틈을 사용하는 경우 다른 방향으로 준다.
+        ex)네이버 두 컨테이너 사이에 여백
+        다 left를 다 주고 padding를 사용해서 틈을 주어도 괜찮다.
+        모양만 완성이 되면 그만
+        */
+        .aside{
+            height: 200px;
+            width: 30%;
+            background-color: blueviolet;
+            float: left;
+        }
+        .section{
+            height: 200px;
+            width: 70%;
+            background-color: aqua;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header"></div>
+        <div class="nav"></div>
+        <div class="center">
+            <div class="aside">Tempor consectetur cupidatat sit ex deserunt exercitation ad fugiat qui fugiat non id.</div>
+            <div class="section">Do est veniam et exercitation.</div>
+        </div>
+        <div class="footer">
+            <h1>hello good day</h1>
+        </div>
+    </div>
+</body>
+</html>

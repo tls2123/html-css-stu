@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*2em | 기본 폰트의 2배
+        font-family | 글꼴의 모양
+        글꼴 모양을 지정햇는데 없는 경우 기본 글꼴로 설정되게 지정 : sans-serif, serif, monospace
+        font-weight | 글자 두께 | bold를 많이 사용 | 폰트에 따라 적용이 안되는 경우 발생
+        text-align | 글자 정렬 , 블록형식에만 적용, 인라인형식에는 적용이 되지 않음
+        line-height: 줄높이 | 블록 형식에만 적용이 이루어진다.
+        */
+        p{
+            font-size: 16px;
+            font-family: MalgunGothic, sans-serif;
+            font-style: italic;
+            font-weight: 100;
+            text-align: center;
+            line-height: 20px;
+        }
+        /*링크를 달면 밑줄이 생기는데 이걸 없애주는 속성*/
+        a{
+            text-decoration: none;
+            color: aquamarine;
+        }
+        /*hover를 사용하면 마우스를 올리면 효과를 내보낸다.*/
+        a:hover{
+            color: coral;
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+    <h1>hello</h1>
+    <p>Dolore veniam esse occaecat minim est deserunt occaecat reprehenderit esse fugiat exercitation irure. Cillum laboris deserunt reprehenderit adipisicing ipsum aute culpa laborum. Lorem occaecat pariatur pariatur amet dolore sint tempor cupidatat commodo proident. Occaecat amet ullamco tempor pariatur ea velit mollit culpa elit occaecat. Et et do reprehenderit nisi aute duis consequat sit cillum est.</p>
+    <a href="#">링크 밑줄 확인</a>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 960px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 8fr;
+            grid-gap: 10px;
+            grid-template-areas: 
+                'header haeder'
+                'aside section'
+                'footer footer';
+        }
+        .header{
+            grid-row: 1 / 2;
+            grid-column: 1 / 3;
+        }
+        .footer{
+            grid-row: 3 / 4;
+            grid-column: 1 / 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>header</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia consectetur placeat dolor voluptatem asperiores ab temporibus beatae repellat maxime, nobis sunt praesentium voluptatum quos similique reprehenderit quaerat facere aliquam inventore.</p>
+        </div>
+        <div class="aside">
+            <h1>aside</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur corrupti quas eligendi quis eveniet quidem provident ipsa explicabo illum. Non quam est ipsum dignissimos magni commodi molestiae itaque, earum minus.</p>
+        </div>
+        <div class="section">
+            <h1>section</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias atque, esse magnam, fugit laborum exercitationem reiciendis, in rerum illum perferendis voluptatum adipisci possimus mollitia vitae quo asperiores animi libero nobis.</p>
+        </div>
+        <div class="footer">
+            <h1>footer</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere iusto sequi quae, ut ad quis. Eos aperiam temporibus nesciunt libero magnam? Blanditiis labore delectus illo voluptatem? Tenetur amet beatae quasi?</p>
+        </div>
+    </div>
+</body>
+</html>
